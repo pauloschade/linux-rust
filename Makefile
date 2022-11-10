@@ -1809,6 +1809,9 @@ PHONY += rustavailable
 rustavailable:
 	$(Q)$(CONFIG_SHELL) $(srctree)/scripts/rust-is-available.sh -v && echo "Rust is available!"
 
+PHONY += rustvm
+rustvm:
+	$(Q) make && qemu-system-x86_64 -append "vdev.devices=4" -nographic -kernel vmlinux -initrd initrd.img -nic user,model=rtl8139,hostfwd=tcp::5555-:23
 # Documentation target
 #
 # Using the singular to avoid running afoul of `no-dot-config-targets`.
