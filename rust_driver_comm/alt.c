@@ -11,7 +11,7 @@ static char receive[BUFFER_LENGTH];
 int main(){
     int ret, fd;
     char stringToSend[BUFFER_LENGTH];
-    char echoCmd[100];
+    char echoCmd[300];
     printf("Starting device test code example...\n");
     fd = open("/dev/ebbchar", O_RDWR);             // Open the device with read/write access
     if (fd < 0){
