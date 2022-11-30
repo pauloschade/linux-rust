@@ -1,9 +1,9 @@
 PHONY += comm
 comm:
 	make -C /lib/modules/$(shell uname -r)/build/ M=$(PWD)  modules
-	$(CC) main.c -o main
+	$(CC) simple.c -o simple
 clean:
 	make -C /lib/modules/$(shell uname -r)/build/ M=$(PWD) clean
-	rm main
+	rm simple
 
 .PHONY: $(PHONY)

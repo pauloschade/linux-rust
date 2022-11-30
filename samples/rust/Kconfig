@@ -17,5 +17,12 @@ config SAMPLE_RUST_HELLO
 
 	  If unsure, say N.
 
+config SAMPLE_RUST_EBBCHAR
+	tristate "Ebbchar"
+	help
+	  This option builds the Rust ebbchar module.
+
+	  If unsure, say N.
+
 
 endif # SAMPLES_RUST

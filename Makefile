@@ -1811,7 +1811,7 @@ rustavailable:
 
 PHONY += rustvm
 rustvm:
-	$(Q) make && qemu-system-x86_64 -nographic -kernel vmlinux -initrd initrd.img -nic user,model=rtl8139,hostfwd=tcp::5555-:23,hostfwd=tcp::2222-:22
+	$(Q) make && qemu-system-x86_64 -nographic -kernel vmlinux -initrd initrd.img -m size=10000  -nic user,model=rtl8139,hostfwd=tcp::5555-:23,hostfwd=tcp::2222-:22
 	
 #-virtfs local,path=/home/paulao/insper,mount_tag=host0,security_model=passthrough,id=host0
 # Documentation target
